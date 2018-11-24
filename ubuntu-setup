@@ -13,3 +13,9 @@ minishift config set skip-check-kvm-driver true
 
 execute
 LANG= minishift start
+
+Install KVM on Ubuntu
+We recommend you to read the official page of KVM.
+
+https://sharadchhetri.com/2014/10/09/install-kvm-kernel-based-virtual-machine-ubuntu-14-04-lts-desktop/
+https://www.linuxtechi.com/install-configure-kvm-ubuntu-18-04-server/
