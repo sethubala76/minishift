@@ -1,0 +1,15 @@
+copy the file
+https://github.com/minishift/minishift/releases/download/v1.27.0/minishift-1.27.0-linux-amd64.tgz
+
+execute the commands:
+sudo curl -L https://github.com/dhiltgen/docker-machine-kvm/releases/download/v0.7.0/docker-machine-driver-kvm -o /usr/local/bin/docker-machine-driver-kvm
+sudo chmod +x /usr/local/bin/docker-machine-driver-kvm
+sudo apt install libvirt-bin qemu-kvm
+sudo usermod -a -G libvirtd marc
+newgrp libvirtd
+
+virsh --connect qemu:///system net-list
+minishift config set skip-check-kvm-driver true
+
+execute
+LANG= minishift start
